@@ -20,7 +20,7 @@ os.system(f"nmcli dev wifi connect {routername}")
 # For windows uncomment the line below (not tested)
 #os.system(f'''cmd /c "netsh wlan connect name={routername}"''')
 
-#Mac users are on their own.
+#Mac users are on their own.
 time.sleep(3)
 
 options = Options()
