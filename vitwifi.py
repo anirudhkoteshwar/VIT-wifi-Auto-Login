@@ -1,3 +1,9 @@
+'''
+    VIT Wifi Autologin Script
+    Anirudh Koteshwar 
+    17-05-2023
+'''
+
 import os
 import sys
 import time
@@ -7,14 +13,15 @@ from selenium.webdriver.common.by import By
 
 regnum = 'XXXXXXX' #Enter your registration number here
 pwsd = 'XXXXXX' #Enter your password here
-routername = "VIT5G"
-
-
+routername = "VIT5G" #Change this to the router name (VIT5G or VIT2.4G)
 
 # The following 2 lines are written for linux to autoconnect to the wifi.
 os.system(f"nmcli dev wifi connect {routername}")
+
 # For windows uncomment the line below (not tested)
 #os.system(f'''cmd /c "netsh wlan connect name={routername}"''')
+
+#Mac users are on their own.
 time.sleep(3)
 
 options = Options()
